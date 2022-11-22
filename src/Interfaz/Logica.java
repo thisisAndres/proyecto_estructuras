@@ -5,19 +5,19 @@ package Interfaz;
 public class Logica {
     //Instanciamineto de Pilas
     //Una PILA por cada ciudad
-    private OperacionesCola pilaRoma = new OperacionesCola();
-    private OperacionesCola pilaNaples = new OperacionesCola();
-    private OperacionesCola pilaMilan = new OperacionesCola();
-    private OperacionesCola pilaVenecia = new OperacionesCola();
-    private OperacionesCola pilaFlorencia = new OperacionesCola();
+    private OperacionesCola colaRoma = new OperacionesCola();
+    private OperacionesCola colaNaples = new OperacionesCola();
+    private OperacionesCola colaMilan = new OperacionesCola();
+    private OperacionesCola colaVenecia = new OperacionesCola();
+    private OperacionesCola colaFlorencia = new OperacionesCola();
 
     //Instanciamiento de Colas
     //Una COLA por cada ciudad
-    private OperacionesPila colaRoma = new OperacionesPila();
-    private OperacionesPila colaNaples = new OperacionesPila();
-    private OperacionesPila colaMilan = new OperacionesPila();
-    private OperacionesPila colaVenecia = new OperacionesPila();
-    private OperacionesPila colaFlorencia = new OperacionesPila();
+    private OperacionesPila pilaRoma = new OperacionesPila();
+    private OperacionesPila pilaNaples = new OperacionesPila();
+    private OperacionesPila pilaMilan = new OperacionesPila();
+    private OperacionesPila pilaVenecia = new OperacionesPila();
+    private OperacionesPila pilaFlorencia = new OperacionesPila();
     
     
     //Instanciamiento de Ciuades
