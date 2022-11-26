@@ -1,4 +1,5 @@
 
+
 package Interfaz;
 
 
@@ -11,24 +12,17 @@ public class OperacionesCola {
         Cola = null;
         
     }
-    
-    public void insertarFinal (int valor) {
 
+    public void insertarFinal (int Persona) {
         NodoCola nuevo = new NodoCola();
-        
-        nuevo.persona = valor;
+        nuevo.persona = Persona;
         nuevo.siguiente = null;
-
         if (Cola == null)
             Cola = nuevo;
-        
-        else {
-            
+        else {   
             NodoCola aux = Cola;
-
             while (aux.siguiente != null)
                 aux = aux.siguiente;
-
             aux.siguiente = nuevo;
             
         }  
@@ -64,4 +58,3 @@ public class OperacionesCola {
     }
     
 }
-
