@@ -5,7 +5,7 @@ package Interfaz;
 public class NodoCola {
     
     public int persona;
-    public String destino;
+    public int destino;
     
     public NodoCola siguiente;
     
