@@ -4,7 +4,7 @@ package Interfaz;
 //codigo Andres-------------------
 public class NodoPila {
     
-    public int tren;
+    public int cuidad;
     
     public NodoPila siguiente;
 }
