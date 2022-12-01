@@ -8,6 +8,25 @@ public class OperacionesTren {
     public OperacionesTren() {
            for(int i = 0; i < Tren.length;Tren[i] = null, i++);
     }
+    public void insertarInicio(int NCuidad) {
+        
+        NodoTren nuevo = new NodoTren();
+        nuevo.cuidad = NCuidad;
+          nuevo.siguiente = null;
+        if (Tren[NCuidad] == null)
+            Tren[NCuidad] = nuevo;
+        else {
+            nuevo.siguiente =Tren[NCuidad];
+            Tren[NCuidad] = nuevo;
+        }
+        
+    }public void borrarInicio (int Ncuidad) {
+        
+        //Checkea si la 
+        if (Tren[Ncuidad] != null)
+                Tren[Ncuidad] = Tren[Ncuidad].siguiente;
+        
+    } 
     
       
 }
