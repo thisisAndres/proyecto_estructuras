@@ -1,10 +1,11 @@
+
 package Interfaz;
 
 
 //Codigo Andres
 public class OperacionesPila {
     
-    NodoPila Pilas[] = new NodoPila[5];
+    NodoPila Pilas[] = new NodoPila[6];
     
     OperacionesPila(){
         
@@ -22,10 +23,10 @@ public class OperacionesPila {
     */
     
     
-    public void insertarInicio(int NCuidad,int valor) {
+    public void insertarInicio(int NCuidad) {
         
         NodoPila nuevo = new NodoPila();
-        nuevo.cuidad = valor;
+        nuevo.cuidad = NCuidad;
         nuevo.siguiente = null;
         
         //Evalua si la pila es Null o no, si es null solo le 
@@ -47,7 +48,22 @@ public class OperacionesPila {
                 Pilas[Ncuidad] = Pilas[Ncuidad].siguiente;
         
     }
-   
+   public void imprimir() {//Por el momento esto esta aqui por si quieren hacer pruebas con respecto a la Pila sin embargo para entrega final no lo ocupamos
+        for(int i = 1; i < Pilas.length; i++) {
+            switch (i) {
+                case 1 -> System.out.println("Roma");
+                case 2 -> System.out.println("Naples");
+                case 3 -> System.out.println("Milan ");
+                case 4 -> System.out.println("Venicia");
+                case 5 -> System.out.println("Florencia");
+                default -> {
+                }
+            }
+           
+            for(NodoPila aux = Pilas[i]; aux != null; aux = aux.siguiente)
+                System.out.println(aux.cuidad);
+        }
+    }
     
     
 }
