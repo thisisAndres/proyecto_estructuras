@@ -1,0 +1,13 @@
+//Esta clase sera el controlador de todo
+package Interfaz;
+
+
+public class OperacionesTren {
+      NodoPila Tren[] = new NodoPila[11];
+
+    public OperacionesTren() {
+           for(int i = 0; i < Tren.length;Tren[i] = null, i++);
+    }
+    
+      
+}
