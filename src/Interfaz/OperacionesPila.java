@@ -6,7 +6,7 @@ package Interfaz;
 //Codigo Andres
 public class OperacionesPila {
     
-    NodoPila Pilas[] = new NodoPila[6];
+    NodoPila Pilas[] = new NodoPila[5];
     
     OperacionesPila(){
         
@@ -15,11 +15,11 @@ public class OperacionesPila {
     
 //Creo que para trabajar mejor en esto podemos usar la matriz debido a que cada pais podria tener su numero de cuidad
     /*
-   NCuidad =1    Roma
-    NCuidad= 2  Naples
-     NCuidad=3   Milan
-     NCuidad=4   Venicia
-     NCuidad=5   Florencia
+   NCuidad =0    Roma
+    NCuidad= 1  Naples
+     NCuidad=2   Milan
+     NCuidad=3   Venicia
+     NCuidad=4   Florencia
     es decir cada vez que un tren vaya a roma guardamos las personas en Roma en int 1
     */
     
@@ -52,11 +52,11 @@ public class OperacionesPila {
    public void imprimir() {//Por el momento esto esta aqui por si quieren hacer pruebas con respecto a la Pila sin embargo para entrega final no lo ocupamos
         for(int i = 1; i < Pilas.length; i++) {
             switch (i) {
-                case 1 -> System.out.println("Roma");
-                case 2 -> System.out.println("Naples");
-                case 3 -> System.out.println("Milan ");
-                case 4 -> System.out.println("Venicia");
-                case 5 -> System.out.println("Florencia");
+                case 0 -> System.out.println("Roma");
+                case 1 -> System.out.println("Naples");
+                case 2 -> System.out.println("Milan ");
+                case 3 -> System.out.println("Venicia");
+                case 4 -> System.out.println("Florencia");
                 default -> {
                 }
             }

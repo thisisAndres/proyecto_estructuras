@@ -1,7 +1,9 @@
+package Interfaz;
+
 public class OperacionesCola {
     
   
-     NodoCola Colas[] = new NodoCola[6];
+     NodoCola Colas[] = new NodoCola[5];
     
     OperacionesCola(){
         
@@ -9,6 +11,7 @@ public class OperacionesCola {
     }
 
     public void insertarFinal (int Cuidad,int destino) {
+        
         NodoCola nuevo = new NodoCola();
         nuevo.persona = destino;
         nuevo.siguiente = null;
@@ -30,13 +33,13 @@ public class OperacionesCola {
         
     }
        public void imprimir() {
-        for(int i = 1; i < Colas.length; i++) {
+        for(int i = 0; i < Colas.length; i++) {
             switch (i) {
-                case 1 -> System.out.println("Roma");
-                case 2 -> System.out.println("Naples");
-                case 3 -> System.out.println("Milan ");
-                case 4 -> System.out.println("Venicia");
-                case 5 -> System.out.println("Florencia");
+                case 0 -> System.out.println("Roma");
+                case 1 -> System.out.println("Naples");
+                case 2 -> System.out.println("Milan ");
+                case 3 -> System.out.println("Venicia");
+                case 4 -> System.out.println("Florencia");
                 default -> {
                 }
             }
@@ -44,6 +47,25 @@ public class OperacionesCola {
             for(NodoCola aux = Colas[i]; aux != null; aux = aux.siguiente)
                 System.out.println(aux.persona);
         }
+    }
+       
+    public void borrarMedio (int Buscar) {
+    
+        if (Colas[Buscar] != null) {
+            
+            NodoCola aux = Colas[Buscar];
+            
+            while (aux.siguiente.persona != Buscar)
+                aux = aux.siguiente;
+            
+            aux.siguiente = aux.siguiente.siguiente;
+            
+        }
+        
+    }
+    
+    public int getDestino(int ciudad){
+        return Colas[ciudad].destino;
     }
     
     //contarPersonas devuelve un dato tipo int el cual es el numero de 
