@@ -10,7 +10,7 @@ package Interfaz;
  * @author josep
  */
 public class Sistemas extends javax.swing.JFrame {
-
+Logica cambiar=new Logica();
     /**
      * Creates new form Sistemas
      */
@@ -28,21 +28,37 @@ public class Sistemas extends javax.swing.JFrame {
     private void initComponents() {
 
         FilaFlorencia = new javax.swing.JLabel();
-        PersonaFlorencia = new javax.swing.JLabel();
-        TrenFlorencia = new javax.swing.JLabel();
+        PilasDeFlorencia = new javax.swing.JLabel();
         FilaVenicia = new javax.swing.JLabel();
-        PersonasVenicia = new javax.swing.JLabel();
-        TrenVenicia = new javax.swing.JLabel();
+        PilasDeVenice = new javax.swing.JLabel();
         FilaMilan = new javax.swing.JLabel();
-        PersonasMilan = new javax.swing.JLabel();
-        TrenMilan = new javax.swing.JLabel();
+        PilasDeMilan = new javax.swing.JLabel();
         FilaNapoles = new javax.swing.JLabel();
-        PersonasNapoles = new javax.swing.JLabel();
-        TrenNapoles = new javax.swing.JLabel();
+        PilasDeNaples = new javax.swing.JLabel();
         FilaRoma = new javax.swing.JLabel();
-        PersonasRoma = new javax.swing.JLabel();
-        TrenRoma = new javax.swing.JLabel();
+        PilasDeRoma = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        Tren1Texto = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        Tren10 = new javax.swing.JLabel();
+        Tren1 = new javax.swing.JLabel();
+        Tren2 = new javax.swing.JLabel();
+        Tren3 = new javax.swing.JLabel();
+        Tren4 = new javax.swing.JLabel();
+        Tren5 = new javax.swing.JLabel();
+        Tren6 = new javax.swing.JLabel();
+        Tren7 = new javax.swing.JLabel();
+        Tren8 = new javax.swing.JLabel();
+        Tren9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,17 +69,11 @@ public class Sistemas extends javax.swing.JFrame {
         FilaFlorencia.setText("0");
         getContentPane().add(FilaFlorencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 40, 30));
 
-        PersonaFlorencia.setBackground(new java.awt.Color(0, 0, 0));
-        PersonaFlorencia.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        PersonaFlorencia.setForeground(new java.awt.Color(0, 0, 0));
-        PersonaFlorencia.setText("0");
-        getContentPane().add(PersonaFlorencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 40, 30));
-
-        TrenFlorencia.setBackground(new java.awt.Color(0, 0, 0));
-        TrenFlorencia.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        TrenFlorencia.setForeground(new java.awt.Color(0, 0, 0));
-        TrenFlorencia.setText("0");
-        getContentPane().add(TrenFlorencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 40, 30));
+        PilasDeFlorencia.setBackground(new java.awt.Color(0, 0, 0));
+        PilasDeFlorencia.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        PilasDeFlorencia.setForeground(new java.awt.Color(0, 0, 0));
+        PilasDeFlorencia.setText("0");
+        getContentPane().add(PilasDeFlorencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 40, 30));
 
         FilaVenicia.setBackground(new java.awt.Color(0, 0, 0));
         FilaVenicia.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
@@ -71,17 +81,11 @@ public class Sistemas extends javax.swing.JFrame {
         FilaVenicia.setText("0");
         getContentPane().add(FilaVenicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, 40, 30));
 
-        PersonasVenicia.setBackground(new java.awt.Color(0, 0, 0));
-        PersonasVenicia.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        PersonasVenicia.setForeground(new java.awt.Color(0, 0, 0));
-        PersonasVenicia.setText("0");
-        getContentPane().add(PersonasVenicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 40, 30));
-
-        TrenVenicia.setBackground(new java.awt.Color(0, 0, 0));
-        TrenVenicia.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        TrenVenicia.setForeground(new java.awt.Color(0, 0, 0));
-        TrenVenicia.setText("0");
-        getContentPane().add(TrenVenicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 40, 30));
+        PilasDeVenice.setBackground(new java.awt.Color(0, 0, 0));
+        PilasDeVenice.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        PilasDeVenice.setForeground(new java.awt.Color(0, 0, 0));
+        PilasDeVenice.setText("0");
+        getContentPane().add(PilasDeVenice, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 240, 40, 30));
 
         FilaMilan.setBackground(new java.awt.Color(0, 0, 0));
         FilaMilan.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
@@ -89,17 +93,11 @@ public class Sistemas extends javax.swing.JFrame {
         FilaMilan.setText("0");
         getContentPane().add(FilaMilan, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 40, 30));
 
-        PersonasMilan.setBackground(new java.awt.Color(0, 0, 0));
-        PersonasMilan.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        PersonasMilan.setForeground(new java.awt.Color(0, 0, 0));
-        PersonasMilan.setText("0");
-        getContentPane().add(PersonasMilan, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 40, 30));
-
-        TrenMilan.setBackground(new java.awt.Color(0, 0, 0));
-        TrenMilan.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        TrenMilan.setForeground(new java.awt.Color(0, 0, 0));
-        TrenMilan.setText("0");
-        getContentPane().add(TrenMilan, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 40, 30));
+        PilasDeMilan.setBackground(new java.awt.Color(0, 0, 0));
+        PilasDeMilan.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        PilasDeMilan.setForeground(new java.awt.Color(0, 0, 0));
+        PilasDeMilan.setText("0");
+        getContentPane().add(PilasDeMilan, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 40, 30));
 
         FilaNapoles.setBackground(new java.awt.Color(0, 0, 0));
         FilaNapoles.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
@@ -107,41 +105,102 @@ public class Sistemas extends javax.swing.JFrame {
         FilaNapoles.setText("0");
         getContentPane().add(FilaNapoles, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 40, 30));
 
-        PersonasNapoles.setBackground(new java.awt.Color(0, 0, 0));
-        PersonasNapoles.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        PersonasNapoles.setForeground(new java.awt.Color(0, 0, 0));
-        PersonasNapoles.setText("0");
-        getContentPane().add(PersonasNapoles, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 40, 30));
-
-        TrenNapoles.setBackground(new java.awt.Color(0, 0, 0));
-        TrenNapoles.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        TrenNapoles.setForeground(new java.awt.Color(0, 0, 0));
-        TrenNapoles.setText("0");
-        getContentPane().add(TrenNapoles, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 40, 30));
+        PilasDeNaples.setBackground(new java.awt.Color(0, 0, 0));
+        PilasDeNaples.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        PilasDeNaples.setForeground(new java.awt.Color(0, 0, 0));
+        PilasDeNaples.setText("0");
+        getContentPane().add(PilasDeNaples, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 40, 30));
 
         FilaRoma.setBackground(new java.awt.Color(0, 0, 0));
         FilaRoma.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         FilaRoma.setForeground(new java.awt.Color(0, 0, 0));
         FilaRoma.setText("0");
-        getContentPane().add(FilaRoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 10, 20));
+        getContentPane().add(FilaRoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 80, 20));
 
-        PersonasRoma.setBackground(new java.awt.Color(0, 0, 0));
-        PersonasRoma.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        PersonasRoma.setForeground(new java.awt.Color(0, 0, 0));
-        PersonasRoma.setText("0");
-        getContentPane().add(PersonasRoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 10, 20));
-
-        TrenRoma.setBackground(new java.awt.Color(0, 0, 0));
-        TrenRoma.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
-        TrenRoma.setForeground(new java.awt.Color(0, 0, 0));
-        TrenRoma.setText("0");
-        getContentPane().add(TrenRoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 40, 30));
+        PilasDeRoma.setBackground(new java.awt.Color(0, 0, 0));
+        PilasDeRoma.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        PilasDeRoma.setForeground(new java.awt.Color(0, 0, 0));
+        PilasDeRoma.setText("0");
+        getContentPane().add(PilasDeRoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 10, 20));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Interfaz.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, -1));
+
+        jLabel2.setText("TREN 10");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 220, 60, 20));
+
+        jButton1.setText("Movimiento");
+        jButton1.setActionCommand("Movimiento");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 310, -1, -1));
+
+        Tren1Texto.setText("TREN 1");
+        getContentPane().add(Tren1Texto, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 20, 60, 20));
+
+        jLabel4.setText("TREN 2");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 40, 60, 20));
+
+        jLabel5.setText("TREN 3");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 60, 60, 30));
+
+        jLabel6.setText("TREN 4");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, 60, 20));
+
+        jLabel7.setText("TREN 5");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 60, 20));
+
+        jLabel8.setText("TREN 6");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 130, 60, 20));
+
+        jLabel9.setText("TREN 7");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 160, 60, 20));
+
+        jLabel10.setText("TREN 8");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 180, 60, 20));
+
+        jLabel11.setText("TREN 9");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 200, 60, 20));
+
+        Tren10.setText("0");
+        getContentPane().add(Tren10, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 220, 50, -1));
+
+        Tren1.setText("0");
+        getContentPane().add(Tren1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, 50, -1));
+
+        Tren2.setText("0");
+        getContentPane().add(Tren2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 40, 50, -1));
+
+        Tren3.setText("0");
+        getContentPane().add(Tren3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 70, 50, -1));
+
+        Tren4.setText("0");
+        getContentPane().add(Tren4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 90, 50, -1));
+
+        Tren5.setText("0");
+        getContentPane().add(Tren5, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, 50, -1));
+
+        Tren6.setText("0");
+        getContentPane().add(Tren6, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 130, 50, -1));
+
+        Tren7.setText("0");
+        getContentPane().add(Tren7, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 160, 50, -1));
+
+        Tren8.setText("0");
+        getContentPane().add(Tren8, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 180, 50, -1));
+
+        Tren9.setText("0");
+        getContentPane().add(Tren9, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, 50, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Arranque();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,6 +236,35 @@ public class Sistemas extends javax.swing.JFrame {
             }
         });
     }
+    public void CambiarEtiqueta(String NombreDeEtiqueta,int valor){
+     String dato=String.valueOf(valor);
+     
+      switch(NombreDeEtiqueta){
+          case "Roma" -> {
+              FilaRoma.setText(dato);
+            }
+          case "Tren1"-> {
+              Tren1.setText(dato);
+          } 
+          case "PilaMilan"-> {
+              PilasDeMilan.setText(dato);
+          }
+      }
+      this.repaint();
+    }
+    public void Arranque(){
+      cambiar.montarPersonas();
+       int guardar; 
+       int guardarTren;
+       int GuardarPila;
+       guardar=cambiar.ContarPersonas(0);
+       guardarTren=cambiar.ContarTrenes(0);
+       GuardarPila=cambiar.ContarPilas(2);
+       CambiarEtiqueta("Roma",guardar);
+       CambiarEtiqueta("Tren1",guardarTren);
+       CambiarEtiqueta("PilaMilan",GuardarPila);
+    }
+           
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FilaFlorencia;
@@ -184,16 +272,32 @@ public class Sistemas extends javax.swing.JFrame {
     private javax.swing.JLabel FilaNapoles;
     private javax.swing.JLabel FilaRoma;
     private javax.swing.JLabel FilaVenicia;
-    private javax.swing.JLabel PersonaFlorencia;
-    private javax.swing.JLabel PersonasMilan;
-    private javax.swing.JLabel PersonasNapoles;
-    private javax.swing.JLabel PersonasRoma;
-    private javax.swing.JLabel PersonasVenicia;
-    private javax.swing.JLabel TrenFlorencia;
-    private javax.swing.JLabel TrenMilan;
-    private javax.swing.JLabel TrenNapoles;
-    private javax.swing.JLabel TrenRoma;
-    private javax.swing.JLabel TrenVenicia;
+    private javax.swing.JLabel PilasDeFlorencia;
+    private javax.swing.JLabel PilasDeMilan;
+    private javax.swing.JLabel PilasDeNaples;
+    private javax.swing.JLabel PilasDeRoma;
+    private javax.swing.JLabel PilasDeVenice;
+    private javax.swing.JLabel Tren1;
+    private javax.swing.JLabel Tren10;
+    private javax.swing.JLabel Tren1Texto;
+    private javax.swing.JLabel Tren2;
+    private javax.swing.JLabel Tren3;
+    private javax.swing.JLabel Tren4;
+    private javax.swing.JLabel Tren5;
+    private javax.swing.JLabel Tren6;
+    private javax.swing.JLabel Tren7;
+    private javax.swing.JLabel Tren8;
+    private javax.swing.JLabel Tren9;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
