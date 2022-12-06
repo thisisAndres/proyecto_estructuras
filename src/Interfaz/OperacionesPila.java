@@ -6,11 +6,11 @@ package Interfaz;
 //Codigo Andres
 public class OperacionesPila {
     
-    NodoPila Pilas[] = new NodoPila[5];
+    NodoPila IndicePilas[] = new NodoPila[5];
     
     OperacionesPila(){
         
-        for(int i = 0; i < Pilas.length;Pilas[i] = null, i++);   
+        for(int i = 0; i < IndicePilas.length;IndicePilas[i] = null, i++);   
     }
     
 //Creo que para trabajar mejor en esto podemos usar la matriz debido a que cada pais podria tener su numero de cuidad
@@ -33,11 +33,11 @@ public class OperacionesPila {
         //Evalua si la pila es Null o no, si es null solo le 
         //anade el valor de nuevo, si no es null se lo anade
         // al siguiente espacion en memoria
-        if (Pilas[NCuidad] == null)
-            Pilas[NCuidad] = nuevo;
+        if (IndicePilas[NCuidad] == null)
+            IndicePilas[NCuidad] = nuevo;
         else {
-            nuevo.siguiente = Pilas[NCuidad];
-            Pilas[NCuidad] = nuevo;
+            nuevo.siguiente = IndicePilas[NCuidad];
+            IndicePilas[NCuidad] = nuevo;
         }
         
     }
@@ -45,25 +45,17 @@ public class OperacionesPila {
     public void borrarInicio (int Ncuidad) {
         
         //Checkea si la 
-        if (Pilas[Ncuidad] != null)
-                Pilas[Ncuidad] = Pilas[Ncuidad].siguiente;
+        if (IndicePilas[Ncuidad] != null)
+                IndicePilas[Ncuidad] = IndicePilas[Ncuidad].siguiente;
         
     }
-   public void imprimir() {//Por el momento esto esta aqui por si quieren hacer pruebas con respecto a la Pila sin embargo para entrega final no lo ocupamos
-        for(int i = 1; i < Pilas.length; i++) {
-            switch (i) {
-                case 0 -> System.out.println("Roma");
-                case 1 -> System.out.println("Naples");
-                case 2 -> System.out.println("Milan ");
-                case 3 -> System.out.println("Venicia");
-                case 4 -> System.out.println("Florencia");
-                default -> {
-                }
-            }
-           
-            for(NodoPila aux = Pilas[i]; aux != null; aux = aux.siguiente)
-                System.out.println(aux.cuidad);
-        }
+  public int ContarPersonasPilas(int i) {
+           int contador=0;  
+            for(NodoPila aux = IndicePilas[i]; aux != null; aux = aux.siguiente){
+              contador++;
+              System.out.println("Pilas"+contador);
+                      }   
+      return contador;     
     }
     
     
