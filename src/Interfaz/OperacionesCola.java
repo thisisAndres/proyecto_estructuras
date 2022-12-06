@@ -1,72 +1,93 @@
-package Interfaz;
+ackage Interfaz;
 
 public class OperacionesCola {
     
   
-     NodoCola Colas[] = new NodoCola[5];
+     NodoCola FilasPorCuidad[] = new NodoCola[5];
     
     OperacionesCola(){
         
-         for(int i = 0; i < Colas.length;Colas[i] = null, i++); 
+         for(int i = 0; i < FilasPorCuidad.length;FilasPorCuidad[i] = null, i++); 
     }
 
     public void insertarFinal (int Cuidad,int destino) {
         
         NodoCola nuevo = new NodoCola();
-        nuevo.persona = destino;
+        nuevo.destino = destino;
         nuevo.siguiente = null;
-        if (Colas[Cuidad] == null)
-            Colas[Cuidad] = nuevo;
+        if (FilasPorCuidad[Cuidad] == null)
+            FilasPorCuidad[Cuidad] = nuevo;
         else {   
-            NodoCola aux = Colas[Cuidad];
+            NodoCola aux = FilasPorCuidad[Cuidad];
             while (aux.siguiente != null)
                 aux = aux.siguiente;
             aux.siguiente = nuevo;
             
         }  
     }
+    public void ImprimirEstado(){
+        int Imprimir=4;
+        while(Imprimir>0){
+            System.out.println("Fila"+FilasPorCuidad[Imprimir]);
+          
+        }
+    }
     
     public void borrarInicio (int Inicio) {
 
-        if (Colas[Inicio] != null)
-            Colas[Inicio] = Colas[Inicio].siguiente;
+        if (FilasPorCuidad[Inicio] != null)
+            FilasPorCuidad[Inicio] = FilasPorCuidad[Inicio].siguiente;
         
     }
-       public void imprimir() {
-        for(int i = 0; i < Colas.length; i++) {
-            switch (i) {
-                case 0 -> System.out.println("Roma");
-                case 1 -> System.out.println("Naples");
-                case 2 -> System.out.println("Milan ");
-                case 3 -> System.out.println("Venicia");
-                case 4 -> System.out.println("Florencia");
-                default -> {
-                }
-            }
-           
-            for(NodoCola aux = Colas[i]; aux != null; aux = aux.siguiente)
-                System.out.println(aux.persona);
-        }
+       public int ContarPersonasFila(int i) {
+           int contador=0;  
+            for(NodoCola aux = FilasPorCuidad[i]; aux != null; aux = aux.siguiente){
+              contador++;
+                System.out.println("Fila"+contador);
+                      }
+        
+      return contador;     
     }
        
-    public void borrarMedio (int Buscar) {
+    public void BorrarPasajero (int UbicacionPasajero,int BoletoDestinoPasajero) {
     
-        if (Colas[Buscar] != null) {
+       
+        if (FilasPorCuidad[UbicacionPasajero] != null) {
             
-            NodoCola aux = Colas[Buscar];
+            NodoCola aux = FilasPorCuidad[UbicacionPasajero];
             
-            while (aux.siguiente.persona != Buscar)
+            while (aux.siguiente.destino != BoletoDestinoPasajero){
+                if(aux.siguiente==null){
+                System.out.println("Ninguna Persona tiene ese boleto");
+            }
                 aux = aux.siguiente;
-            
+            }
             aux.siguiente = aux.siguiente.siguiente;
             
         }
         
     }
-    
-    public int getDestino(int ciudad){
-        return Colas[ciudad].destino;
+ public int ContarPasajeros(int UbicacionPasajero,int DestinoPasajero){
+       int contarPasajeros=0;
+     if (FilasPorCuidad[UbicacionPasajero] != null) {
+            
+            NodoCola aux = FilasPorCuidad[UbicacionPasajero];
+            
+            while (aux.siguiente != null){
+                if(aux.destino==DestinoPasajero){
+                    contarPasajeros++;
+                    System.out.println("FuncionDecontar"+contarPasajeros);
+                }
+                aux = aux.siguiente; 
+            }
+                  
+        }
+     return contarPasajeros;
+ }
+    public int getDestinoCola(int ciudad){
+        return FilasPorCuidad[ciudad].destino;
     }
+    
     
     //contarPersonas devuelve un dato tipo int el cual es el numero de 
     //personas que hay en la fila
