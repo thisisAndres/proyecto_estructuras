@@ -1,4 +1,4 @@
-ackage Interfaz;
+package Interfaz;
 
 public class OperacionesCola {
     

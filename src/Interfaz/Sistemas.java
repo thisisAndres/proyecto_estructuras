@@ -240,15 +240,47 @@ Logica cambiar=new Logica();
      String dato=String.valueOf(valor);
      
       switch(NombreDeEtiqueta){
-          case "Roma" -> {
-              FilaRoma.setText(dato);
-            }
-          case "Tren1"-> {
-              Tren1.setText(dato);
-          } 
-          case "PilaMilan"-> {
-              PilasDeMilan.setText(dato);
-          }
+          case "Roma" -> {FilaRoma.setText(dato);}
+          
+          case "Napoles" -> {FilaNapoles.setText(dato);}
+          
+          case "Milan" -> {FilaMilan.setText(dato);}
+          
+          case "Venecia" -> {FilaVenicia.setText(dato);}
+          
+          case "Florencia" -> {FilaFlorencia.setText(dato);}
+          
+          //Trenes
+          case "Tren1"-> {Tren1.setText(dato);} 
+          
+          case "Tren2"-> {Tren2.setText(dato);} 
+
+          case "Tren3"-> {Tren3.setText(dato);} 
+          
+          case "Tren4"-> {Tren4.setText(dato);} 
+          
+          case "Tren5"-> {Tren5.setText(dato);} 
+          
+          case "Tren6"-> {Tren6.setText(dato);} 
+          
+          case "Tren7"-> {Tren7.setText(dato);} 
+
+          case "Tren8"-> {Tren8.setText(dato);} 
+          
+          case "Tren9"-> {Tren9.setText(dato);} 
+          
+          case "Tren10"-> {Tren10.setText(dato);}   
+          
+          //Pilas
+          case "PilaRoma"-> {PilasDeRoma.setText(dato);}
+          
+          case "PilaNapoles"-> {PilasDeNaples.setText(dato);}
+          
+          case "PilaMilan"-> {PilasDeMilan.setText(dato);}
+          
+          case "PilaVenecia"-> {PilasDeVenice.setText(dato);}
+          
+          case "PilaFlorencia"-> {PilasDeFlorencia.setText(dato);}
       }
       this.repaint();
     }

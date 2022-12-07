@@ -1,4 +1,4 @@
-/Esta clase sera el controlador de todo
+//Esta clase sera el controlador de todo
 package Interfaz;
 
 
