@@ -1,4 +1,5 @@
 
+
 package Interfaz;
 
 
@@ -87,12 +88,13 @@ public class Logica {
     
     }
     
-     public int MontarPasajero(int UbicacionPasajero, int BoletoPasajero){
+     public void MontarPasajero(int UbicacionPasajero, int BoletoPasajero){
        System.out.println("UbicacionPasajero"+UbicacionPasajero);
        System.out.println("UbicacionBoletoPasajero"+BoletoPasajero);
          int CantidadPasajeros= EjecucionesColas.ContarPasajeros(UbicacionPasajero, BoletoPasajero);
+         BajarPersonasDelTren(CantidadPasajeros);
        System.out.println("Pasajeros en Montar"+CantidadPasajeros);
-       int GuardarCantidadPasajeros=CantidadPasajeros;
+      
         while(CantidadPasajeros>0){//4
          
             EjecucionesTrenes.insertarInicio(BoletoPasajero,0,0);//4
@@ -100,19 +102,20 @@ public class Logica {
        CantidadPasajeros--;
         }
         
-       return GuardarCantidadPasajeros; 
+       
+       
        
     }public void TrasladarTren(int NumeroDeTren){
         EjecucionesTrenes.TrasladarTren(NumeroDeTren);
     }
 
 public void BajarPersonasDelTren(int NumeroDeTrenABajar){
-       int BajarPasajeros;
-       BajarPasajeros=MontarPasajero(0,2);
-       System.out.println("PasajerosQueBajan"+BajarPasajeros);
-       while(BajarPasajeros>0){
+       
+       System.out.println("PasajerosQueBajan"+NumeroDeTrenABajar);
+       while(NumeroDeTrenABajar>0){
            EjecucionesTrenes.borrarInicio(NumeroDeTrenABajar); 
            EjecucionesPilas.insertarInicio(2);
+           NumeroDeTrenABajar--;
        }
        
        
