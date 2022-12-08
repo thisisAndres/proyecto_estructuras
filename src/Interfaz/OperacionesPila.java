@@ -11,6 +11,7 @@ public class OperacionesPila {
     OperacionesPila(){
         
         for(int i = 0; i < IndicePilas.length;IndicePilas[i] = null, i++);   
+       
     }
     
 //Creo que para trabajar mejor en esto podemos usar la matriz debido a que cada pais podria tener su numero de cuidad
@@ -39,14 +40,6 @@ public class OperacionesPila {
             nuevo.siguiente = IndicePilas[NCuidad];
             IndicePilas[NCuidad] = nuevo;
         }
-        
-    }
-    //Implementacion de vector de pilas tomada de la ultima clase que tuvimos de estructura de datos
-    public void borrarInicio (int Ncuidad) {
-        
-        //Checkea si la 
-        if (IndicePilas[Ncuidad] != null)
-                IndicePilas[Ncuidad] = IndicePilas[Ncuidad].siguiente;
         
     }
   public int ContarPersonasPilas(int i) {

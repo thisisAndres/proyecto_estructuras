@@ -4,7 +4,7 @@ public class OperacionesCola {
     
   
      NodoCola FilasPorCuidad[] = new NodoCola[5];
-     NodoCola TrenesCuidad[] = new NodoCola[10];
+     
     OperacionesCola(){
          
          for(int i = 0; i < FilasPorCuidad.length;FilasPorCuidad[i] = null, i++); 
@@ -31,13 +31,6 @@ public class OperacionesCola {
             System.out.println("Fila"+FilasPorCuidad[Imprimir]);
           
         }
-    }
-    
-    public void borrarInicio (int Inicio) {
-
-        if (FilasPorCuidad[Inicio] != null)
-            FilasPorCuidad[Inicio] = FilasPorCuidad[Inicio].siguiente;
-        
     }
        public int ContarPersonasFila(int i) {
            int contador=0;  
