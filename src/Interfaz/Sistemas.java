@@ -204,7 +204,7 @@ Logica cambiar=new Logica();
       cambiar.EjecutarTrenes();
        int guardarFilaRoma; 
        int GuardarPilaMilan;
-       guardarFilaRoma=cambiar.ContarPersonas(2);
+       guardarFilaRoma=cambiar.ContarPersonas(0);
        GuardarPilaMilan=cambiar.ContarPilas(2);
        CambiarEtiqueta("Roma",guardarFilaRoma);
        CambiarEtiqueta("PilaMilan",GuardarPilaMilan);
