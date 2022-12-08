@@ -190,24 +190,97 @@ Logica cambiar=new Logica();
      String dato=String.valueOf(valor);
      
       switch(NombreDeEtiqueta){
+          
+          
+          //FILAS
           case "Roma" -> {
               FilaRoma.setText(dato);
             }
+          case "Napoles" -> {
+              FilaNapoles.setText(dato);
+            }
+          case "Milan" -> {
+              FilaMilan.setText(dato);
+            }
+          case "Venecia" -> {
+              FilaVenicia.setText(dato);
+            }
+          case "Florencia" -> {
+              FilaFlorencia.setText(dato);
+            }
+          
+//          PILAS
           case "PilaMilan"-> {
               PilasDeMilan.setText(dato);
           }
-         
+          case "PilaRoma"-> {
+              PilasDeRoma.setText(dato);
+          }
+          case "PilaNapoles"-> {
+              PilasDeNaples.setText(dato);
+          }
+          case "PilaVenecia"-> {
+              PilasDeVenice.setText(dato);
+          }
+          case "PilaFlorencia"-> {
+              PilasDeFlorencia.setText(dato);
+          }
+          
+          
       }
       this.repaint();
     }
     public void Arranque(){
+        
       cambiar.EjecutarTrenes();
+      //inicializando guardarFilas
        int guardarFilaRoma; 
-       int GuardarPilaMilan;
-       guardarFilaRoma=cambiar.ContarPersonas(0);
-       GuardarPilaMilan=cambiar.ContarPilas(2);
+       int guardarFilaNapoles;
+       int guardarFilaMilan;
+       int guardarFilaVenecia;
+       int guardarFilaFlorencia;
+       
+       // inicializando guardarPilas
+       int guardarPilaRoma; 
+       int guardarPilaNapoles;
+       int guardarPilaMilan;
+       int guardarPilaVenecia;
+       int guardarPilaFlorencia;
+       
+//        NCuidad =0    Roma
+//        NCuidad= 1  Napoles
+//        NCuidad=2   Milan
+//        NCuidad=3   Venecia
+//        NCuidad=4   Florencia
+        
+       //GUARDADO DE FILAS Y PILAS
+       guardarFilaRoma = cambiar.ContarPersonas(0);
+       guardarFilaNapoles = cambiar.ContarPersonas(1);
+       guardarFilaMilan = cambiar.ContarPersonas(2);
+       guardarFilaVenecia = cambiar.ContarPersonas(3);
+       guardarFilaFlorencia = cambiar.ContarPersonas(4);
+       
+       guardarPilaRoma = cambiar.ContarPersonas(0);
+       guardarPilaNapoles = cambiar.ContarPersonas(1);
+       guardarPilaMilan = cambiar.ContarPersonas(2);
+       guardarPilaVenecia = cambiar.ContarPersonas(3);
+       guardarPilaFlorencia = cambiar.ContarPersonas(4);
+       
+       //Cambiando etiquetas de FILAS
        CambiarEtiqueta("Roma",guardarFilaRoma);
-       CambiarEtiqueta("PilaMilan",GuardarPilaMilan);
+       CambiarEtiqueta("Napoles", guardarFilaNapoles);
+       CambiarEtiqueta("Milan", guardarFilaMilan);
+       CambiarEtiqueta("Venicia", guardarFilaVenecia);
+       CambiarEtiqueta("Florencia", guardarFilaFlorencia);
+       
+       
+       CambiarEtiqueta("PilaRoma",guardarPilaRoma);
+       CambiarEtiqueta("PilaNapoles", guardarPilaNapoles);
+       CambiarEtiqueta("PilaMilan", guardarPilaMilan);
+       CambiarEtiqueta("PilaVenicia", guardarPilaVenecia);
+       CambiarEtiqueta("PilaFlorencia", guardarPilaFlorencia);
+        
+       
     }
            
 
