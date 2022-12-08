@@ -27,11 +27,11 @@ public class Logica {
         int Maximo=4;
         int Minimo=0;
         int rango = Maximo - Minimo + 1;
-      
+        for (int i = 0; i < personas15; i++) {
         int posibilidadDeDestino =(int) (Math.random() * rango)+Minimo;
         int posibilidadDeCuidadDeOrigen =(int) (Math.random() * rango)+Minimo;
         Tren(0,posibilidadDeCuidadDeOrigen,posibilidadDeDestino);//el primero es el numero del tren, el segundo es la ubicacion del pasajero, el tercero es el boletoDelPasajero  
-    
+     }
 }
     public int ContarPersonas(int cuidad){ 
         return EjecucionesColas.ContarPersonasFila(cuidad); 
