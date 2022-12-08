@@ -6,7 +6,7 @@ public class Logica {
   OperacionesCola EjecucionesColas = new OperacionesCola();
   OperacionesPila EjecucionesPilas= new OperacionesPila();
   NodoTren TrenesCuidad[] = new NodoTren[10];
-     public void InicializarPersonas(int LugarDePersonas) {
+     public void IngresarPersonas(int LugarDePersonas) {
 
         int personas15=15;
         int Maximo=4;
@@ -23,15 +23,15 @@ public class Logica {
             }
      } 
     public void EjecutarTrenes (){
-        int Trenes10=0;
+        int Trenes10=10;
         int Maximo=4;
         int Minimo=0;
         int rango = Maximo - Minimo + 1;
-        for (int i = 0; i < personas15; i++) {
+         for (int i = 0; i < Trenes10; i++) {
         int posibilidadDeDestino =(int) (Math.random() * rango)+Minimo;
         int posibilidadDeCuidadDeOrigen =(int) (Math.random() * rango)+Minimo;
-        Tren(0,posibilidadDeCuidadDeOrigen,posibilidadDeDestino);//el primero es el numero del tren, el segundo es la ubicacion del pasajero, el tercero es el boletoDelPasajero  
-     }
+        Tren(i,posibilidadDeCuidadDeOrigen,posibilidadDeDestino);//el primero es el numero del tren, el segundo es la ubicacion del pasajero, el tercero es el boletoDelPasajero  
+    }
 }
     public int ContarPersonas(int cuidad){ 
         return EjecucionesColas.ContarPersonasFila(cuidad); 
@@ -48,7 +48,7 @@ public class Logica {
       TrenesCuidad[NumeroDeTren] =nuevo;
       BajarPersonasDelTren(CantidadPasajeros,BoletoPasajeroTren);
       TrenesCuidad[NumeroDeTren]=null;
-      InicializarPersonas(BoletoPasajeroTren);
+      IngresarPersonas(BoletoPasajeroTren);
 }
      public void EnviarPasajeros(int UbicacionPasajero, int BoletoPasajero,int CantidadPasajeros){
        System.out.println("UbicacionPasajero"+UbicacionPasajero);
