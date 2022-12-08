@@ -4,9 +4,9 @@ public class OperacionesCola {
     
   
      NodoCola FilasPorCuidad[] = new NodoCola[5];
-    
+     NodoCola TrenesCuidad[] = new NodoCola[10];
     OperacionesCola(){
-        
+         
          for(int i = 0; i < FilasPorCuidad.length;FilasPorCuidad[i] = null, i++); 
     }
 
@@ -51,22 +51,22 @@ public class OperacionesCola {
        
     public void BorrarPasajero (int UbicacionPasajero,int BoletoDestinoPasajero) {
     
-       
-        if (FilasPorCuidad[UbicacionPasajero] != null) {
-            
-            NodoCola aux = FilasPorCuidad[UbicacionPasajero];
-            
-            while (aux.siguiente.destino != BoletoDestinoPasajero){
-                if(aux.siguiente==null){
-                System.out.println("Ninguna Persona tiene ese boleto");
+       NodoCola Inicio;
+       NodoCola Fin=null;
+       Inicio=FilasPorCuidad[UbicacionPasajero];
+        while(Inicio!=null){
+            if(Inicio.destino==BoletoDestinoPasajero){
+                if(Inicio==FilasPorCuidad[UbicacionPasajero]){
+                    FilasPorCuidad[UbicacionPasajero]=FilasPorCuidad[UbicacionPasajero].siguiente; 
+                }else{
+                    Fin.siguiente=Inicio.siguiente;  
+                }
             }
-                aux = aux.siguiente;
-            }
-            aux.siguiente = aux.siguiente.siguiente;
-            
+            Fin=Inicio;
+            Inicio=Inicio.siguiente;
         }
-        
     }
+    
  public int ContarPasajeros(int UbicacionPasajero,int DestinoPasajero){
        int contarPasajeros=0;
      if (FilasPorCuidad[UbicacionPasajero] != null) {
@@ -87,31 +87,4 @@ public class OperacionesCola {
     public int getDestinoCola(int ciudad){
         return FilasPorCuidad[ciudad].destino;
     }
-    
-    
-    //contarPersonas devuelve un dato tipo int el cual es el numero de 
-    //personas que hay en la fila
-    /*
-    public int contarPersonas(){
-        
-        int cuenta = 0;
-        
-        if (Cola == null)
-            return cuenta;
-        else{
-            
-                NodoCola aux = Cola;
-                
-                //anade 1 cada vez que el siguiente no sea null
-                while(aux.siguiente != null)
-                    cuenta++;
-                
-                return cuenta;
-            
-            }
-        
-    }
-    codigo en mantenimiento jajaja
-    */
-    
 }
