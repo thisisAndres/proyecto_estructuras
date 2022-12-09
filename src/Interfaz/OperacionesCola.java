@@ -25,19 +25,11 @@ public class OperacionesCola {
             
         }  
     }
-    public void ImprimirEstado(){
-        int Imprimir=4;
-        while(Imprimir>0){
-            System.out.println("Fila"+FilasPorCuidad[Imprimir]);
-          
-        }
-    }
        public int ContarPersonasFila(int i) {
            int contador=0;  
             for(NodoCola aux = FilasPorCuidad[i]; aux != null; aux = aux.siguiente){
               contador++;
-                System.out.println("Fila"+contador);
-                      }
+           }
         
       return contador;     
     }
@@ -63,13 +55,10 @@ public class OperacionesCola {
  public int ContarPasajeros(int UbicacionPasajero,int DestinoPasajero){
        int contarPasajeros=0;
      if (FilasPorCuidad[UbicacionPasajero] != null) {
-            
             NodoCola aux = FilasPorCuidad[UbicacionPasajero];
-            
             while (aux.siguiente != null){
                 if(aux.destino==DestinoPasajero){
                     contarPasajeros++;
-                    System.out.println("FuncionDecontar"+contarPasajeros);
                 }
                 aux = aux.siguiente; 
             }

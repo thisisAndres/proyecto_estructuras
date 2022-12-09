@@ -51,17 +51,12 @@ public class Logica {
       IngresarPersonas(BoletoPasajeroTren);
 }
      public void EnviarPasajeros(int UbicacionPasajero, int BoletoPasajero,int CantidadPasajeros){
-       System.out.println("UbicacionPasajero"+UbicacionPasajero);
-       System.out.println("UbicacionBoletoPasajero"+BoletoPasajero);
-       System.out.println("Pasajeros en Montar"+CantidadPasajeros);
        while(CantidadPasajeros>0){//4
        EjecucionesColas.BorrarPasajero(UbicacionPasajero,BoletoPasajero);//4
        CantidadPasajeros--;
         }  
      }
 public void BajarPersonasDelTren(int NumeroDeTrenABajar,int BoletoPasajero){
-       
-       System.out.println("PasajerosQueBajan"+NumeroDeTrenABajar);
        while(NumeroDeTrenABajar>0){
            EjecucionesPilas.insertarInicio(BoletoPasajero);
            NumeroDeTrenABajar--;

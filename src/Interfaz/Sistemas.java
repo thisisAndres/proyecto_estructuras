@@ -202,7 +202,7 @@ Logica cambiar=new Logica();
           case "Milan" -> {
               FilaMilan.setText(dato);
             }
-          case "Venecia" -> {
+          case "Venicia" -> {
               FilaVenicia.setText(dato);
             }
           case "Florencia" -> {
@@ -219,7 +219,7 @@ Logica cambiar=new Logica();
           case "PilaNapoles"-> {
               PilasDeNaples.setText(dato);
           }
-          case "PilaVenecia"-> {
+          case "PilaVenicia"-> {
               PilasDeVenice.setText(dato);
           }
           case "PilaFlorencia"-> {
@@ -260,11 +260,11 @@ Logica cambiar=new Logica();
        guardarFilaVenecia = cambiar.ContarPersonas(3);
        guardarFilaFlorencia = cambiar.ContarPersonas(4);
        
-       guardarPilaRoma = cambiar.ContarPersonas(0);
-       guardarPilaNapoles = cambiar.ContarPersonas(1);
-       guardarPilaMilan = cambiar.ContarPersonas(2);
-       guardarPilaVenecia = cambiar.ContarPersonas(3);
-       guardarPilaFlorencia = cambiar.ContarPersonas(4);
+       guardarPilaRoma = cambiar.ContarPilas(0);
+       guardarPilaNapoles = cambiar.ContarPilas(1);
+       guardarPilaMilan = cambiar.ContarPilas(2);
+       guardarPilaVenecia = cambiar.ContarPilas(3);
+       guardarPilaFlorencia = cambiar.ContarPilas(4);
        
        //Cambiando etiquetas de FILAS
        CambiarEtiqueta("Roma",guardarFilaRoma);
@@ -279,8 +279,6 @@ Logica cambiar=new Logica();
        CambiarEtiqueta("PilaMilan", guardarPilaMilan);
        CambiarEtiqueta("PilaVenicia", guardarPilaVenecia);
        CambiarEtiqueta("PilaFlorencia", guardarPilaFlorencia);
-        
-       
     }
            
 
