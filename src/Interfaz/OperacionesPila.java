@@ -46,7 +46,7 @@ public class OperacionesPila {
            int contador=0;  
             for(NodoPila aux = IndicePilas[i]; aux != null; aux = aux.siguiente){
               contador++;
-              System.out.println("Pilas"+contador);
+          
                       }   
       return contador;     
     }
